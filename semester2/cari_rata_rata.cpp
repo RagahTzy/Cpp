@@ -6,7 +6,7 @@ int main(){
     int n;
     cout << "berapa jumlah nilai yang ingin dimasukkan?";
     cin >> n;
-    int data[n];
+    int data[10];
     int jumlah = 0;
     int panjangarray = sizeof(data)/sizeof(data[0]);
     
