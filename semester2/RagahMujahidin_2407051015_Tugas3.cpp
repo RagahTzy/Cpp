@@ -12,7 +12,10 @@ private:
     Node* next;
 
 public:
-    LinkedList() : head(nullptr), next(nullptr) {}
+    LinkedList() {
+    head = nullptr;
+    next = nullptr;
+    }
 
     bool isEmpty() {
         return head == nullptr;
