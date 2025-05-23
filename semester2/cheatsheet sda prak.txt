@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+int fibonacci(int angka){
+    if(angka == 0){
+        return 0;
+    }else if(angka == 1){
+        return 1;
+    }else{return fibonacci(angka - 1) + fibonacci(angka - 2);}
+}
+
+int main(){
+    int angka;
+    cout << "Masukkan angka: ";
+    cin >> angka;
+    cout << "Fibonacci ke-" << angka << " adalah " << fibonacci(angka) << endl;
+    return 0;
+}
+
+===============================================================================
+
+void bubbleSort(int arr[], int pjg) {
+    for (int i = 0; i < pjg - 1; ++i) {
+        for (int j = 0; j < pjg - i - 1; ++j) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+
+===============================================================================
+
+void selectionSort(int arr[], int pjg) {
+    for (int i = 0; i < pjg - 1; ++i) {
+        int idxMin = i;
+        for (int j = i + 1; j < pjg; ++j) {
+            if (arr[j] < arr[idxMin]) {
+                idxMin = j;
+            }
+        }
+        swap(arr[i], arr[idxMin]);
+    }
+}
+
+===============================================================================
+
+void insertionSort(int arr[], int pjg) {
+    for (int i = 1; i < pjg; ++i) {
+        int kunci = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > kunci) {
+            arr[j + 1] = arr[j];
+            --j;
+        }
+        arr[j + 1] = kunci;
+    }
+}
+
+===============================================================================
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+===============================================================================
+
+struct Node {
+    int data;
+    Node* prev;
+    Node* next;
+};
